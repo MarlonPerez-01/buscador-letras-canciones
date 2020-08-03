@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Buscador de letras",
+  "name": "Buscador de letras de canciones",
   "icons": [
     {
       "src": "favicon.ico",

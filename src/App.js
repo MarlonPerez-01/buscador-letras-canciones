@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+
+import Header from './components/Header';
+import Artist from './components/Artist';
+import Lyrics from './components/Lyrics';
 
 function App() {
+  //State con toda la informacion proveida por las APIs
+  const [allData, setAllData] = useState({
+    dataLyrics: {},
+    dataArtist: {},
+  });
+  const { dataLyrics, dataArtist } = allData;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="header">
+        <Header setAllData={setAllData} />
+      </div>
+      <div className="lyrics-container">
+        <Lyrics dataLyrics={dataLyrics} />
+      </div>
+      <div className="artist-container">
+        <Artist dataArtist={dataArtist} />
+      </div>
     </div>
   );
 }

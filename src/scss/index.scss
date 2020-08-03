@@ -1,0 +1,44 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_layout.scss';
+@import '_utilities.scss';
+
+body {
+  background-color: $color-bg;
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+  color: #5a5e72;
+}
+
+//Estilos para los titulos
+h1,
+h2 {
+  color: #666;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.lyrics-parr {
+  white-space: pre;
+  text-align: center;
+}
+
+p {
+  line-height: 1.8rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: -5px -5px 20px white, 5px 5px 20px $color-shadow;
+}

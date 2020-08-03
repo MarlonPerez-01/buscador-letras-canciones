@@ -1,0 +1,75 @@
+.container {
+  display: grid;
+
+  grid-template-areas:
+    'header'
+    'artist'
+    'lyrics';
+  grid-template-columns: 1fr;
+  max-width: 90vw;
+  column-gap: 4rem;
+
+  @include mq($screen-lg-min) {
+    grid-template-areas:
+      'header header'
+      'lyrics artist';
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80vw;
+  }
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  grid-area: header;
+}
+
+.artist-container {
+  grid-area: lyrics;
+}
+
+.lyrics-container {
+  grid-area: artist;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+  input {
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+
+  input,
+  button {
+    flex-basis: 100%;
+  }
+
+  @include mq($screen-md-min) {
+    display: flex;
+    flex-wrap: wrap;
+
+    input {
+      margin-right: 2rem;
+      margin-bottom: auto;
+    }
+
+    input,
+    button {
+      flex-basis: auto;
+      flex-grow: 1;
+    }
+  }
+}
+
+.container-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  a {
+    flex-grow: 0;
+  }
+}
